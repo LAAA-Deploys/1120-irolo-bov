@@ -153,6 +153,11 @@ td.num, th.num { text-align: right; }
 .buyer-photo { width: 100%; height: 260px; border-radius: 8px; overflow: hidden; margin-top: 24px; }
 .buyer-photo img { width: 100%; height: 100%; object-fit: cover; }
 .narrative { font-size: 14px; line-height: 1.7; color: #444; margin-bottom: 16px; }
+.photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0 8px; }
+.photo-grid .ph { height: 220px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+.photo-grid .ph img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.photo-caption { font-size: 11px; color: #888; text-align: center; margin-top: 6px; }
+@media (max-width: 768px) { .photo-grid { grid-template-columns: 1fr 1fr; } .photo-grid .ph { height: 150px; } }
 .pathway-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 28px 0; }
 .pathway-card-x { border-radius: 12px; padding: 26px 28px; color: #fff; box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
 .pathway-navy { background: linear-gradient(135deg, #1B3A5C 0%, #0F2745 100%); }
@@ -229,7 +234,7 @@ td.num, th.num { text-align: right; }
 
 <!-- COVER -->
 <div class="cover">
-  <div class="cover-bg" style="background-image:url('images/cover_hero.jpg');"></div>
+  <div class="cover-bg" style="background-image:url('images/cover_hero.jpg');background-position:center 35%;"></div>
   <div class="cover-content">
     <img src="images/LAAA_Team_White.png" class="cover-logo" alt="LAAA Team">
     <div class="cover-label">Confidential Broker Opinion of Value</div>
@@ -373,7 +378,7 @@ td.num, th.num { text-align: right; }
       </div>
     </div>
     <div class="inv-right">
-      <div class="inv-photo"><img src="images/property_secondary.png" alt="Aerial view"></div>
+      <div class="inv-photo"><img src="images/property_secondary.jpg" alt="Renovated townhome interior - living area and kitchen"></div>
       <div class="inv-highlights"><h4>Investment Highlights</h4><ul>
         <li><strong>Six units, delivered turnkey</strong> - five 3BR/2.5BA townhomes plus a brand-new studio ADU, finaled and leased at close</li>
         <li><strong>All-3BR townhouse core</strong> - &plusmn;1,440 SF two-story units, no stacked neighbors, in-unit W/D throughout</li>
@@ -450,6 +455,16 @@ td.num, th.num { text-align: right; }
       <tr><td>Registration</td><td>No RSO registration; SCEP applies</td></tr>
     </tbody></table></div>
   </div>
+  <h3 class="sub-heading">Property Photographs</h3>
+  <div class="photo-grid">
+    <div class="ph"><img src="images/gallery_kitchen.jpg" alt="Renovated kitchen with quartz counters and stainless appliances"></div>
+    <div class="ph"><img src="images/gallery_living.jpg" alt="Living room with private balcony"></div>
+    <div class="ph"><img src="images/gallery_stairs.jpg" alt="Townhome interior staircase"></div>
+    <div class="ph"><img src="images/gallery_bedroom.jpg" alt="Bedroom with mirrored closet"></div>
+    <div class="ph"><img src="images/gallery_bath.jpg" alt="Renovated bathroom with LED vanity mirror"></div>
+    <div class="ph"><img src="images/gallery_laundry.jpg" alt="In-unit stacked LG washer and dryer"></div>
+  </div>
+  <p class="photo-caption">Unit interiors as marketed for lease; renovated finishes vary by unit. Full photo set available on request.</p>
 </div>
 
 <!-- BUYER PROFILE -->
